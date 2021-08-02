@@ -1,0 +1,29 @@
+{
+  "name": "dev-env",
+  "version": "1.0.0",
+  "description": "Node development environment",
+  "main": "app.js",
+  "scripts": {
+    "start": "DEBUG=app nodemon ./src/app.js"
+  },
+  "author": "Juliana Miranda",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.3.2",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "engines": {
+    "debug": "^4.3.2",
+    "node": "16.6.0",
+    "npm": "7.30.3"
+  },
+  "keywords": [
+    "node",
+    "starter",
+    "boilerplate"
+  ],
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
