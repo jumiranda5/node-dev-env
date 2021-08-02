@@ -1,6 +1,7 @@
-const express = require('express');
-const debug = require('debug')('app');
-const morgan = require('morgan');
+import express from 'express';
+import chalk from 'chalk';
+const debug = require('debug')('app:');
+import morgan from 'morgan';
 
 // Instantiate the app
 const app = express();
@@ -20,6 +21,6 @@ app.listen(port, (err) => {
   if (err) {
     debug(err);
   } else {
-    debug(`Server is listening on port ${port}`);
+    debug(`Server is listening on port ${chalk.green(port)}`);
   }
 });
