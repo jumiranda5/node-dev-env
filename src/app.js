@@ -9,11 +9,8 @@ const app = express();
 app.use(morgan('dev'));
 
 // include routes
-app.get('/', (req, res) => {
-  const message = "Hello, world!";
-  debug(message);
-  res.send(message);
-});
+const routes = require('./routes');
+app.use('/', routes);
 
 // Invoke the app's '.listen()'
 const port = process.env.PORT || 3000;
