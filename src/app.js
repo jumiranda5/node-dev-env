@@ -2,6 +2,7 @@ import express from 'express';
 import chalk from 'chalk';
 const debug = require('debug')('app:');
 import morgan from 'morgan';
+import config from './config';
 
 // Instantiate the app
 const app = express();
@@ -13,7 +14,7 @@ const routes = require('./routes');
 app.use('/', routes);
 
 // Invoke the app's '.listen()'
-const port = process.env.PORT || 3000;
+const port = config.PORT;
 app.listen(port, (err) => {
   if (err) {
     debug(err);
