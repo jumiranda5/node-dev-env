@@ -1,7 +1,7 @@
 {
-  "name": "dev-env",
+  "name": "node-dev-env",
   "version": "1.0.0",
-  "description": "Node development environment",
+  "description": "Simple node development environment for api",
   "main": "app.js",
   "scripts": {
     "lint": "esw src --color",
@@ -17,12 +17,18 @@
     "build": "babel src --out-dir dist",
     "start": "NODE_ENV=production node ./dist/app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jumiranda5/node-dev-env"
+  },
   "author": "Juliana Miranda",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "debug": "^4.3.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "helmet": "^4.6.0",
     "morgan": "^1.10.0"
   },
   "engines": {

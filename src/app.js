@@ -2,10 +2,16 @@ import express from 'express';
 import chalk from 'chalk';
 const debug = require('debug')('app:');
 import morgan from 'morgan';
+import helmet from 'helmet';
+import cors from 'cors';
 import config from './config';
 
 // Instantiate the app
 const app = express();
+
+app.use(helmet());
+
+app.use(cors());
 
 app.use(morgan('dev'));
 
